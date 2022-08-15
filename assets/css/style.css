@@ -11,6 +11,7 @@
     --white: #ffffff;
     --beige: #f9f5f2;
     --ligh: #cfb5ffc0;
+    --bgviolet: #ece4fb ;
 
     /* Tipografía */
     --mainfont: 'Montserrat', sans-serif;
@@ -34,7 +35,7 @@ body {
     padding: 0;
     font-family: var(--mainfont);
     font-size: 16px;
-    background-color: var(--beige);
+    background-color: var(--lightpink);
     
 }
 
@@ -135,7 +136,7 @@ a{
 }
 
 .nav-item:hover {
-    background-color: var(--lightviolet);
+    background-color: var(--bgviolet);
     transition: .2s;
 }
 
@@ -180,15 +181,14 @@ a{
     position: absolute;
     right: 15px;
     top: -21px;
-    rotate: 326deg;
+    transform: rotate(326deg);
     z-index: -1;
     
 }
 .all {
     height: 2em;
     border-radius: 0.938em;
-    background-color: var(--lightviolet);
-    opacity: .2;
+    background-color:var(--bgviolet);
     margin: 0.438em 0.375em;
 }
 
@@ -237,12 +237,18 @@ h3 {
 
 
 .conteneder-icon {
+    max-height: 50px;
     margin: 0;
-    padding: 3%;
+    padding: 12px;
     background-color: var(--lightviolet);
     border: solid 1px var(--white);
     border-radius: 50%;
     cursor: pointer;
+}
+
+.conteneder-icon:hover {
+    transform: scale(1.3);
+    transition: transform 200ms ease;
 }
 
 .contac-button {
@@ -256,10 +262,10 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    min-width: 418px;
     height: 59px;
     margin-bottom: 10px;
-    background-color: var(--darkviolet);
+    background-color: var(--lightviolet);
     color: var(--white);
     font-family: var(--mainfont);
     border: none;
@@ -267,10 +273,17 @@ h3 {
     font-size: 21px;
 }
 
+.contac-button:hover {
+    transform: scale(1.02);
+    transition: transform 200ms ease;
+}
+
 .contact-mail_icon {
     width: 23px;
     margin-right: 27px;
 }
+
+
 
 /* ABOUT ME */
 
@@ -287,7 +300,7 @@ h3 {
 }
 
 .section_about-me__parrafo {
-    margin: 0 auto;
+    text-align: center;
 }
 
 /* habilidades */
@@ -305,26 +318,33 @@ h3 {
     width: 100%;
     scroll-snap-type: x mandatory;
     scroll-padding: 24px;
-    border-radius: 8px;
     gap: 12px;
 
 }
 
 .section_skills__articles .skills__article__items {
-    flex: 0 0 29%;
-    padding: 26px;
-    border-radius: 29px;
-    scroll-snap-align: start;
+    flex: 0 0 29%; 
+    padding: 15px;
+    scroll-snap-align: center;
     width: 188px;
     min-width: 167px;
-    background-color: var(--ligh);
-    align-items: center;
-    justify-content: center;
+    background-color: var(--bgviolet);
+    min-height: 198px;
 
 }
 
+.skills__article__items:hover {
+    transform: scale(1.05);
+    transition: transform 200ms ease;
+}
+
 .skills__article__items {
-    text-align: center;
+   font-size: 15px;
+}
+.section_skills__articles_title {
+      text-align: center; 
+      padding-top: 10px;
+      padding-bottom: 7px;
 }
 
 /* Experiencia */
@@ -341,9 +361,57 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+   /*  gap: 90px; */
     
 }
 
+
+.logo-empresa {
+    min-width: 65px;
+    max-width: 65px;
+
+}
+
+.experience-container-items__title, .experiencies_note {
+    font-weight: 600;
+
+}
+
+.experience-container-items__text1, .experience-container-items__text2 {
+    font-size: 13px;
+    color: var(--darkgrey);
+}
+
+.experience-container-items__text2 { 
+    font-weight: 200;
+    color: var(--darkgrey);
+}
+
+.experience-container__items{
+    min-width: 200px;
+    max-width: 250px;
+}
+
+.experiencies_note {
+    min-width: 50px;
+}
+
+.portafolio_container {
+    margin: 25px auto;
+}
+
+
+.imgportafolio{
+    max-width: 300px;
+}
+
+.imgportafolio:hover {
+    transform: scale(1.05);
+    transition: transform 200ms ease;
+}
+
+
+ 
 footer {
     margin-bottom: 50px;
 }
@@ -361,6 +429,7 @@ footer {
 
 }
 
+
 .contac-container {
     width: 100%;
     display: flex;
@@ -372,12 +441,18 @@ footer {
 .footer-icon {
         display: inline;
         padding: 9%;
-        background-color: var(--lightpink);
+        background-color: var(--bgviolet);
         opacity: 10;
         border: solid 1px var(--white);
         border-radius: 50%;
         margin: 12px auto;
 }
+
+.footer-icon:hover {
+    transform: scale(1.2);
+    transition: transform 200ms ease;
+}
+
 
 .contac-method {
     
@@ -388,11 +463,25 @@ footer {
     margin-bottom: 32px;
 }
 
-.love {
-	color: red;
-	font-size: 1rem;
+.parrafo1 {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 30px;
 }
 
+.parrafo2 {
+    text-align: center;
+    color: var(--darkgrey);
+}
+
+.parrafo_amor, .love {
+    color: var(--darkviolet) ;
+    font-size: 1rem;
+}
+
+
+/*··················· INICIO DEL MEDIAQUERY :::::::::::::::::::::*/
 @media screen and (min-width: 678px) {
 
     
@@ -434,7 +523,7 @@ footer {
         width: 100%;
         text-align: center;
         transition: 0.2s;
-        background-color: var(--beige);
+        background-color: var(--lightpink);
         opacity: .9;
         border-radius: 25% 0 0 25%;
         cursor: pointer;
@@ -510,9 +599,8 @@ footer {
 .introduction {
     grid-column: 2;
     grid-row: 2 / 3;
-    display: flex;
-    align-items: flex-end;
-    padding-bottom: 1.5rem;
+    align-self: end;
+    padding-bottom: 20px;
 }
 
 .main-buttons {
@@ -542,21 +630,15 @@ footer {
 .decoration-container {
     font-size: 21px;
     width: 485.5px;
-    display: flex;
-    flex-wrap: wrap;
-    position: absolute;
-    right: -0.062em;
-    top: 0.687em;
-    rotate: 326deg;
-    z-index: -1;
-
 }
 
 .contac-button__item {
     height: 50px;
 }
 
-
+.section_skills__articles {
+    gap: 66px;
+}
 .section_about-me__parrafo {
     text-align: center;
     font-size: 16px;
@@ -569,125 +651,39 @@ footer {
     justify-content: center;
 
 }
-    
+
+.section_experience__container {
+    flex-direction: row;
+    gap: 70px;
+    margin: 39px auto;
+}
+
+.experience-container__article {
+    gap: 10px; 
+}
+.experience-container__items {
+    min-width: auto;
+    max-width: auto;
+}
+.experiencies_note {
+    font-size: 14px;
+}
+
+.portafolio_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+}
+
+.imgportafolio{
+    border-radius: 20px;
+    overflow-x: scroll;
+}
+
+
+
 /* FIN DEL MEDIAQUERY */
 }
 
-
-/* 
-.principal-section {
-    display: flex;
-    flex-direction: column;
-    padding-right: 20px;
-}
-
-.title {
-    margin-bottom: 10px;
-}
-
-.imagen-principal {
-    display: flex;
-    position: relative;
-    margin-top: 30px;
-}
-
-.decoration-container {
-    width: 392px;
-    display: flex;
-    flex-wrap: wrap;
-    position: absolute;
-    right: 15px;
-    top: -21px;
-    rotate: 326deg;
-    z-index: -1;
-    
-}
-.all {
-    height: 32px;
-    border-radius: 15px;
-    background-color: var(--lightviolet);
-    opacity: .2;
-    margin: 7px 6px;
-}
-
-.decoration1 {
-    width: 165px;
-    margin-left: 36px;
-}
-
-.decoration2 {
-    width: 79px;
-}
-
-.decoration3 {
-    margin-left: 18px;
-    width: 295px;
-}
-
-.decoration4 {
-    margin-left: 0;
-    width: 164px;
-}
-
-.decoration5 {
-    margin-right: 0;
-    width: 143px;
-}
-
-h3 {
-    font-size: 21px;
-    font-weight: 400;
-    color: var(--darkgrey);
-}
-
-.imagen-principal, .main-buttons{
-    margin: 0 auto;
-}
-
-.main-buttons {
-    width: 60%;
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    top: -30px;
-    border-radius: 50px;
-}
-
-
-.conteneder-icon {
-    margin: 0;
-    padding: 3%;
-    background-color: var(--lightviolet);
-    border: solid 1px var(--white);
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.contac-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
-
-.contac-button__item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 59px;
-    margin-bottom: 10px;
-    background-color: var(--darkviolet);
-    color: var(--white);
-    font-family: var(--mainfont);
-    border: none;
-    cursor: pointer;
-    font-size: 21px;
-}
-
-.contact-mail_icon {
-    width: 23px;
-    margin-right: 27px;
-}
-
- */
