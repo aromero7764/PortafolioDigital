@@ -630,7 +630,8 @@ footer {
     display: flex;
     justify-content: center;
     width: 70%;
-    height: 13.5rem;
+    height: 4.5rem;
+    margin-top: 69px;
 }
 
 /* decoration container */
