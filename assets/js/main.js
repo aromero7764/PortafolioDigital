@@ -15,3 +15,21 @@ document.querySelectorAll(".nav-link").forEach( a => a.addEventListener("click",
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
 }))
+
+/* darkmode */
+const toggle = document.getElementById('toggle')
+const toggleCircle = document.getElementById('toggle-circle')
+const toggleLabel = document.getElementById('toggle-label')
+
+const changeDarklight = () => {
+    toggleCircle.classList.toggle('toggle_circle-right')
+    document.body.classList.toggle('dark-mode')
+    if (toggleLabel.textContent === 'Dark') {
+        toggleLabel.textContent = 'Light'
+    } else {
+        toggleLabel.textContent = 'Dark'
+    }
+   
+}
+
+toggle.addEventListener('click', changeDarklight )

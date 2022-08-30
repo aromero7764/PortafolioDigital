@@ -9,7 +9,7 @@
     <script src="./assets/js/main.js" defer></script>
     <title>Alberto Romero | Portafolio Web</title>
 </head>
-<body>
+<body class="">
 
 <header class="header">
 
@@ -23,18 +23,23 @@
                 <a class="nav-link" href="#home"><li class="nav-item home">Home</li></a> 
                 <a class="nav-link" href="#about"><li class="nav-item">Acerca de mí</li></a>
                 <a class="nav-link" href="#skills"><li class="nav-item">Mis habilidades</li></a>
-                <a class="nav-link" href="#experience"><li class="nav-item">Experiencia</li></a>
                 <a class="nav-link" href="#portafolio"><li class="nav-item">Portafolio</li></a>
                 <a class="nav-link" href="#contacto"><li class="nav-item">Contacto</li></a>
             </ul>
         </nav>
+        <article class="darklight">
+            <h2 id="toggle-label" class="darlike__label">Light</h2>
+              <div id="toggle" class="toggle">
+                <div id="toggle-circle" class="toggle_circle"></div>
+              </div>
+          </article>
 </header>
 <div class="contenedor-principal">
 <main>
 <!-- seccion principal -->
     <section id="home" class="principal-section">
-        <h1 class="title">Full Stack Web Developer</h1>
-        <h3 class="introduction">JavaScript, CSS, HTML, PHP, SQL, GIT</h3>
+        <h1 class="title">Full Stack Web <br><span class="development">Developer</span></h1> 
+        <h3 class="introduction">JavaScript, React, CSS, HTML, PHP, SQL</h3>
         <div class="imagen-principal">
             <div class="decoration-container">
                 <div class="decoration1 all"></div>
@@ -44,7 +49,7 @@
                 <div class="decoration5 all"></div>
             </div>
            
-            <img class="imagen-personal" src="./assets/img/foto_personal.png" alt="foto-personal">
+            <img class="imagen-personal" src="./assets/img/personal-foto_m.png" alt="foto-personal">
         </div>
         <div class="main-buttons">
             <div class="conteneder-icon">
@@ -59,7 +64,7 @@
         </div>
         <div class="contac-button">
             <form action="#contacto">
-            <button class="contac-button__item"><img class="contact-mail_icon" src="./assets/img/mail 3.svg" alt="">Contáctame</button>
+            <button class="contac-button__item rgb"><img class="contact-mail_icon" src="./assets/img/mail 3.svg" alt="">Contáctame</button>
              </form>
         </div>
     </section>
@@ -69,14 +74,14 @@
         <section id="about" class="section_about-me subtitle mainsection">
             <h2 class="section-title subtitle">Acerca de mí</h2>
                 <p class="section_about-me__parrafo normal">Hola &#128075;
-                    me llamo Alberto Romero, vivo en Caracas, Venezuela, soy Licenciado en Comercio Internacional. He trabajado en diferentes áreas tales como, soporte técnico, electrónica, logística, distribución y almacenes. Sin embargo, desde mis inicios siempre me ha fascinado el diseño web y la programación, aún recuerdo aquellos años en los que usaba FrontPage y Dreamweaver, para uno que otro proyecto pequeño, desde ese entonces ya sabía que ser desarrollador web iba a ser mi futuro. Actualmente, estoy en formación en Academlo como Desarrollador Web Full Stack.</p>
+                    me llamo Alberto Romero, vivo en Caracas, Venezuela, soy Licenciado en Comercio Internacional. He trabajado en diferentes áreas tales como, soporte técnico, electrónica, logística, distribución y almacenes. Sin embargo, desde mis inicios siempre me ha fascinado el diseño web y la programación. Actualmente, estoy en formación en Academlo como Desarrollador Web Full Stack.</p>
         </section>
 <!-- Mis habilidades -->
         <section id="skills" class="section_skills mainsection">
             <h2 class="section-title subtitle">Mis habilidades</h2>
                 <div class="section_skills__articles">
     <!-- Articulos -->
-                    <article class="skills__article__items">
+                    <article class="skills__article__items rgb">
                         <h4 class="section_skills__articles_title">
                             <svg class="img-logos" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 452 520">
                                 <path fill="#e34f26" d="M41 460L0 0h451l-41 460-185 52" />
@@ -84,9 +89,9 @@
                                 <path fill="#ecedee" d="M226 208h-75l-5-58h80V94H84l15 171h127zm0 147l-64-17-4-45h-56l7 89 117 32z"/>
                                 <path fill="#fff" d="M226 265h69l-7 73-62 17v59l115-32 16-174H226zm0-171v56h136l5-56z"/>
                               </svg>HTML5</h4>
-                        <p>Conocimientos de la estructura y semántica para desplegar una página web y sus contenidos</p>
+                        <!-- <p>Conocimientos de la estructura y semántica para desplegar una página web y sus contenidos</p> -->
                     </article>
-                    <article class="skills__article__items">
+                    <article class="skills__article__items rgb">
                         <h4 class="section_skills__articles_title">
                             <svg class="img-logos" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 452 520">
                                 <path fill="#0c73b8" d="M41 460L0 0h451l-41 460-185 52"/>
@@ -94,59 +99,36 @@
                                 <path fill="#ecedee" d="M226 208H94l5 57h127zm0-114H84l5 56h137zm0 261l-124-33 7 60 117 32z"/>
                                 <path fill="#fff" d="M226 265h69l-7 73-62 17v59l115-32 26-288H226v56h80l-6 58h-74z"/>
                               </svg>CSS</h4>
-                        <p>Experiencia en maquetado WEB con CSS, posicionamiento de elementos de manera eficiente</p>
+                        <!-- <p>Experiencia en maquetado WEB con CSS, posicionamiento de elementos de manera eficiente</p> -->
                     </article>
-                    <article class="skills__article__items">
+                    <article class="skills__article__items rgb">
                         <h4 class="section_skills__articles_title">
                             <svg class="img-logos" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 630 630">
                                 <rect width="630" height="630" fill="#f7df1e"/>
                                 <path d="m423.2 492.19c12.69 20.72 29.2 35.95 58.4 35.95 24.53 0 40.2-12.26 40.2-29.2 0-20.3-16.1-27.49-43.1-39.3l-14.8-6.35c-42.72-18.2-71.1-41-71.1-89.2 0-44.4 33.83-78.2 86.7-78.2 37.64 0 64.7 13.1 84.2 47.4l-46.1 29.6c-10.15-18.2-21.1-25.37-38.1-25.37-17.34 0-28.33 11-28.33 25.37 0 17.76 11 24.95 36.4 35.95l14.8 6.34c50.3 21.57 78.7 43.56 78.7 93 0 53.3-41.87 82.5-98.1 82.5-54.98 0-90.5-26.2-107.88-60.54zm-209.13 5.13c9.3 16.5 17.76 30.45 38.1 30.45 19.45 0 31.72-7.61 31.72-37.2v-201.3h59.2v202.1c0 61.3-35.94 89.2-88.4 89.2-47.4 0-74.85-24.53-88.81-54.075z"/>
                               </svg>JavaScript (JS)</h4>
+                            </article>
+                              <article class="skills__article__items rgb">
+                                <h4 class="section_skills__articles_title">
+                                    <svg class="img-logos" xmlns="http://www.w3.org/2000/svg" viewBox="-11.5 -10.23174 23 20.46348">
+                                        <title>React Logo</title>
+                                        <circle cx="0" cy="0" r="2.05" fill="#61dafb"/>
+                                        <g stroke="#61dafb" stroke-width="1" fill="none">
+                                          <ellipse rx="11" ry="4.2"/>
+                                          <ellipse rx="11" ry="4.2" transform="rotate(60)"/>
+                                          <ellipse rx="11" ry="4.2" transform="rotate(120)"/>
+                                        </g>
+                                      </svg>React</h4>
                              
 
                        
-                        <p>Conocimiento en el lenguaje de programación JavaScript para el desarrollo Backend</p>
+                        <!-- <p>Conocimiento en el lenguaje de programación JavaScript para el desarrollo Backend</p> -->
                     </article>
     <!-- Fin Articulos -->
                 </div>
         </section>
 <!-- Fin min habilidades -->
-<!-- Experiencia -->
-        <section id="experience" class="section_experience mainsection">
-            <h2 class="section-title subtitle">Experiencia</h2>
-            <div class="section_experience__container">
-                <!-- Experiencia 1 -->
-                <article class="experience-container__article">
-                    <img class="logo-empresa" src="./assets/img/steYuryorLogo-.png" alt="logo-empresa">
-                    <div class="experience-container__items">
-                        <p class="experience-container-items__title">STE Yur Yor</p>
-                        <p class="experience-container-items__text1">Especialista Técnico</p>
-                        <p class="experience-container-items__text2">2020 al presente</p>
-                    </div>
-                    <p class="experiencies_note">2 años</p>
-                </article>
-                <!-- FIN article Experiencias -->
-                <!-- Experiencia 2 -->
-                <article class="experience-container__article">
-                    <img class="logo-empresa emp1" src="./assets/img/LogoDisofi.png" alt="logo-empresa">
-                    <div class="experience-container__items">
-                        <p class="experience-container-items__title">Dintec JL</p>
-                        <p class="experience-container-items__text1">Resp. de Tecnología</p>
-                        <p class="experience-container-items__text2">2013 al 2018</p>
-                    </div>
-                    <p class="experiencies_note">5 años</p>
-                </article>
-                <!-- FIN article Experiencias -->
-                <!-- Experiencia 3 -->
-                <article class="experience-container__article">
-                    <img class="logo-empresa" src="./assets/img/IBM_logo.svg" alt="logo-empresa">
-                    <div class="experience-container__items">
-                        <p class="experience-container-items__title">IBM</p>
-                        <p class="experience-container-items__text1">Analista de Help Desk</p>
-                        <p class="experience-container-items__text2">2007 al 2008</p>
-                    </div>
-                    <p class="experiencies_note">1 año</p>
-                </article>
+
                 <!-- FIN article Experiencias -->
             </div>
         </section>
@@ -155,10 +137,10 @@
         <section id="portafolio" class="portafolio mainsection">
             <h2 class="section-title subtitle">Portafolio</h2>
             <div class="portafolio_container">
-                <article class="portafolio_articles">
+                <article class="portafolio_articles rgb">
                     <a href="https://velvety-rolypoly-91df31.netlify.app/" target="_blank"><img class="imgportafolio" src="./assets/img/SocialMediaDashboard.jpg" alt="portafolio_imagen"></a>
                 </article>
-                <article class="portafolio_articles">
+                <article class="portafolio_articles rgb">
                     <a href="https://roaring-jelly-81eb51.netlify.app/" target="_blank"><img class="imgportafolio" src="./assets/img/Sunshine.jpg" alt="portafolio_imagen"></a>
                 </article>
               

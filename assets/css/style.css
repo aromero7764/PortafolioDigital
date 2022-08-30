@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,500;0,600;1,400&display=swap');
 /* Custom properties */
 
+/*  .dark-mode {
+    --black: #fff9f9;
+    --darkgrey: #ebebeb;
+    --white: #000000;
+    --beige: #726962;
+    --ligh: #56545ac0;
+    --bgviolet: #5b595e ; } */
+
 :root {
     /* Colores */
     --lightviolet: #8e7bef;
@@ -17,6 +25,19 @@
     --mainfont: 'Montserrat', sans-serif;
 
   }
+
+.dark-mode {
+    --darkviolet: #a08bff;
+    --black: #fff9f9;
+    --darkgrey: #ebebeb;
+    --white: #000000;
+    --beige: #726962;
+    --ligh: #56545ac0;
+    --bgviolet: #5b595e ; 
+}
+
+
+
 
   /* Reset */
   *{
@@ -35,7 +56,7 @@ body {
     padding: 0;
     font-family: var(--mainfont);
     font-size: 16px;
-    background-color: var(--lightpink);
+    background-color: var(--white);
     
 }
 
@@ -58,18 +79,25 @@ a{
 
 }
 
+p {
+    color: var(--black);  
+}
+
 /* Mobile First */
 
 .title {
     font-size: 50px;
     font-weight: 600;
+    color: var(--black);
 }
 .subtitle {
     font-size: 24px;
     font-weight: 600;
+    color: var(--black);
 }
 .subsection {
     font-size: 20px;
+    color: var(--black);
 }
 .normal {
     font-size: 16px;
@@ -78,6 +106,7 @@ a{
 }
 .caption {
     font-size: 12px;
+    color: var(--black);
 }
 
 .samllicon {
@@ -91,6 +120,50 @@ a{
 .minimalicon {
     width: 10px;
 }
+
+
+.darlike__label {
+    font-size: 16px;
+    font-weight: normal;
+    color: var(--black);
+}
+
+.darklight {
+    margin-top: 15px;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 17px;
+    position: absolute;
+    gap: 6px;
+}
+
+.darlike__label {
+    font-size: 1
+}
+
+    .toggle{
+        width: 50px;
+        aspect-ratio: 2;
+        border-radius: 15px;
+        background-color: var(--lightpink);
+        padding: 3px;
+    }
+    
+    .toggle_circle {
+        height: 100%;
+        aspect-ratio: 1;
+        background-color: var(--lightviolet);
+        border-radius: 50px;
+        cursor: pointer;
+        transition: transform 200ms ease;
+    }
+    
+    .toggle_circle-right {
+        transform: translateX(calc(50px - 6px - 100%));
+        transition: transform 200ms ease;
+    }
 
 /* MENU */
 
@@ -154,6 +227,8 @@ a{
 .nav-menu.active {
     right: 0;
 }
+
+
 
 /* seccion principal */
 
@@ -306,7 +381,7 @@ h3 {
 /* habilidades */
 
 .img-logos {
-    width: 20px;
+    width: 88px;
     display: block;
     margin: 6px auto;
 }
@@ -503,6 +578,51 @@ footer {
         font-size: 150px;
         font-weight: 600;
     }
+
+.darklight {
+        margin-top: 75px;
+        position: absolute;
+        right: 0;
+        margin-right: 36px;
+    }
+
+/* ++++++++++++++++++++++++++++++++++ */
+.development{
+        display: inline-block;
+        overflow: hidden;
+        border-right: 6px solid var(--lightviolet);
+        white-space: nowrap;
+        box-shadow: none;
+        animation: typing 2.5s steps(20, end), cursor-blink 0.9s step-end infinite;
+      }
+      
+      /* The typing effect */
+      @keyframes typing {
+        from {
+          width: 0px;
+        }
+        to {
+          width: 100%;
+          box-shadow: 0px 18px 17px -12px rgba(0,0,0,0.49);
+        }
+      }
+      
+      /* The typewriter cursor effect */
+      @keyframes cursor-blink {
+        from,
+        to {
+          border-color: transparent;
+        }
+        80% {
+          border-color: var(--lightviolet);
+          
+        }
+      }
+      
+
+/* ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´ */
+
+
     .subtitle {
         font-size: 50px;
         font-weight: 600;
@@ -531,7 +651,7 @@ footer {
         width: 100%;
         text-align: center;
         transition: 0.2s;
-        background-color: var(--lightpink);
+        background-color: var(--white);
         opacity: .9;
         border-radius: 25% 0 0 25%;
         cursor: pointer;
@@ -577,6 +697,7 @@ footer {
     padding-right: 20px;
     grid-template-rows: 6rem 14rem 13rem;
     grid-template-columns: 27rem 29rem;
+    margin-top: 47px;
     
 }
 
@@ -587,6 +708,7 @@ footer {
     grid-row: 1 / 4;
     align-items: end;
     padding-bottom: 42px;
+    
 }
 
 .imagen-personal {
@@ -594,6 +716,9 @@ footer {
     max-width: 376px;
     height: 463px;
     padding-top: 35px;
+    box-shadow: -6px 40px 13px -24px rgba(0,0,0,0.35);
+    border-bottom-left-radius: 82px;
+    border-bottom-right-radius: 15px;
 }
 
 .title {
@@ -622,6 +747,7 @@ footer {
     top: 0px;
     border-radius: 50px;
     gap: 4rem;
+    
 }
 
 .contac-button {
@@ -634,19 +760,73 @@ footer {
     margin-top: 69px;
 }
 
+.conteneder-icon{
+    border: transparent;
+    box-shadow: -3px 18px 17px -14px rgba(0,0,0,0.41);
+}
+
+
+
 /* decoration container */
 
 .decoration-container {
     font-size: 21px;
     width: 485.5px;
+    
 }
 
 .contac-button__item {
+    position: relative;
     height: 50px;
+    /* box-shadow: 0px 18px 17px -12px rgba(0,0,0,0.49); */
 }
 
 .section_skills__articles {
-    gap: 66px;
+    gap: 26px;
+
+}
+
+.section_skills__articles_title {
+    font-size: 19px;
+
+}
+
+.skills__article__items {
+    position: relative;
+
+}
+
+.rgb::after {
+    content:"";
+    background: linear-gradient(45deg,
+    #ff0000 0%, 
+    #ff9a00 10%,
+    #d0de21 20%,
+    #4fdc4a 30%, 
+    #3fdad8 40%,
+    #2fc9e2 50%, 
+    #1c7fee 60%, 
+    #5f15f2 70%, 
+    #ba0cf8 80%, 
+    #fb07d9 90%, 
+    #ff0000 100%  )
+    repeat 0% 0% / 300% 100%;
+    position: absolute;
+    z-index: -1;
+    inset: -3px;
+    border-radius: 16px;
+    filter: blur(8px);
+    animation: rgb 6s linear infinite;
+  }
+
+  @keyframes rgb {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+  }
+
+.section_skills__articles .skills__article__items {
+    flex: 0 0 17%;
 }
 .section_about-me__parrafo {
     text-align: center;
@@ -690,10 +870,20 @@ footer {
 .imgportafolio{
     border-radius: 20px;
     overflow-x: scroll;
+
+}
+
+.portafolio_articles {
+    position: relative;
 }
 
 
+  .contac-container {
+    width: 76%; }
 
+    .parrafo2 {
+        font-size: 16px;
+    }
 /* FIN DEL MEDIAQUERY */
 }
 
