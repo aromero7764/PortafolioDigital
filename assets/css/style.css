@@ -386,6 +386,7 @@ h3 {
     margin: 6px auto;
 }
 
+
 .section_skills__articles {
     display: flex;
     overflow-x: scroll;
@@ -396,6 +397,27 @@ h3 {
     gap: 12px;
 
 }
+
+ .section_skills__articles::-webkit-scrollbar {
+    width: 8px;
+}
+
+ .section_skills__articles::-webkit-scrollbar-thumb {
+    width: 7px;
+    background-color: var(--beige);
+    border-radius: 10px;
+}
+
+.section_skills__articles::-webkit-scrollbar-thumb:active {
+    background-color: #ecdcdc;
+  }
+
+.section_skills__articles::-webkit-scrollbar-thumb:hover {
+    background: var(--bgviolet);
+
+  }
+  
+
 
 .section_skills__articles .skills__article__items {
     flex: 0 0 29%; 
@@ -473,6 +495,12 @@ h3 {
 
 .portafolio_container {
     margin: 25px auto;
+}
+
+.article-container__title {
+    text-align: center;
+    margin-bottom:  14px;
+    font-size: 17px;
 }
 
 
@@ -558,6 +586,15 @@ footer {
 
 /*··················· INICIO DEL MEDIAQUERY :::::::::::::::::::::*/
 @media screen and (min-width: 678px) {
+
+.main {
+
+    display: flex;
+    max-width: 1173px;
+    flex-direction: column;
+    margin: 0 auto;
+    box-shadow: 1px 647px 29px 11px rgb(0 0 0 / 15%);
+}
 
     .logo-empresa {
         min-width: 65px;
@@ -783,16 +820,21 @@ footer {
 
 .section_skills__articles {
     gap: 26px;
+    width: 144%;
 
 }
 
 .section_skills__articles_title {
     font-size: 19px;
+    transform: translateZ(50px);
 
 }
 
 .skills__article__items {
     position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    perspective: 1000px;
 
 }
 
@@ -813,17 +855,21 @@ footer {
     repeat 0% 0% / 300% 100%;
     position: absolute;
     z-index: -1;
+    transform: translateZ(-1px);
     inset: -3px;
     border-radius: 16px;
     filter: blur(8px);
     animation: rgb 6s linear infinite;
   }
 
+
+
   @keyframes rgb {
     0% {background-position: 0% 50%;}
     50% {background-position: 100% 50%;}
     100% {background-position: 0% 50%;}
   }
+
 
 .section_skills__articles .skills__article__items {
     flex: 0 0 17%;
@@ -860,10 +906,10 @@ footer {
 }
 
 .portafolio_container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 85%;
+    gap: 35px;
 
 }
 
