@@ -506,6 +506,7 @@ h3 {
 
 .imgportafolio{
     max-width: 300px;
+    max-height: 210px;
 }
 
 .imgportafolio:hover {
